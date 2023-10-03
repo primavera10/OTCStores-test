@@ -9,7 +9,7 @@
       <li>2. Выполните задания и сделайте коммит</li>
       <li>3. Создайте в вашем любимом git-сервисе публичный репозиторий и укажите его в качестве remote для вашего локального проекта</li>
       <li>4. Отправьте ваш результат в свой репозиторий и пришлите ссылку на него</li>
-    </ul> 
+    </ul>
 
     <h2>Задача 1. Вёрстка</h2>
     <div>
@@ -103,9 +103,21 @@ ul {
 .logo-container {
   max-width: 600px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
+@media screen and (min-width: 601px) {
+  .logo-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo-container {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
 .bordered-two {
   display: flex;
   justify-content: center;
