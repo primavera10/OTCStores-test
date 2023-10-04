@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, defineExpose } from "vue";
+  import { defineExpose } from "vue";
+  import { counter as count } from '../store.js'
 
-  const count = ref(0)
   const click = () => {
     count.value++
   }
