@@ -40,10 +40,10 @@
     <h2>Задача 3. Модификация вывода</h2>
     <div class="bordered-two">
       <the-counter>
-        <template #default>
+        <template #default="{message}">
           <p>
             Count:
-            <input type="text" readonly>
+            <input :value="message" type="text" readonly>
           </p>
         </template>
       </the-counter>
@@ -79,6 +79,7 @@ const logos = [
     "https://img.otcstores.com/616/hex_lab-616d885202.png",
     "https://img.otcstores.com/ac4/fossa-ac4ac5b9ac.png"
 ]
+
 </script>
 <style>
 #app {

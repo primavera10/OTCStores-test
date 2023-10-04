@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>TheCounter</h3>
-    <slot name="default">
+    <slot :message="count" name="default">
       <p>Count: {{ count }}</p>
     </slot>
     <button @click="click">Click me</button>
@@ -13,7 +13,7 @@
 
   const count = ref(0)
   const click = () => {
-      count.value++
+    count.value++
   }
 
   defineExpose({
