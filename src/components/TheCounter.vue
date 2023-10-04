@@ -9,10 +9,15 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+  import { ref, defineExpose } from "vue";
 
-const count = ref(0)
-const click = () => {
-  count.value++
-}
+  const count = ref(0)
+  const click = () => {
+      count.value++
+  }
+
+  defineExpose({
+    click,
+  })
+
 </script>

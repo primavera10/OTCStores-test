@@ -28,8 +28,8 @@
 
     <h2>Задача 2. Связь компонентов</h2>
     <div class="bordered-two">
-      <the-counter />
-      <the-clicker />
+      <the-counter ref="counter"/>
+      <the-clicker @add-count="counter.click()"/>
     </div>
     <p>
       Оптимальным образом модифицировать код проекта так,
@@ -61,6 +61,9 @@
 import TheClicker from "./components/TheClicker.vue";
 import TheCounter from "./components/TheCounter.vue";
 import TheLogo from "./components/TheLogo.vue";
+import {ref} from 'vue';
+
+const counter = ref();
 
 const logos = [
     "https://img.otcstores.com/4a3/leaf-4a36b846ec.png",
